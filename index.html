@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-game">
+        <div class="hangman">
+          <div class="hangman__svg">
+            <svg class="svg" height="280" width="300">
+              <g id="body">
+                <g id="head">
+                  <circle cx="200" cy="80" r="20" />
+                </g>
+                <g class="all">
+                  <line
+                    id="torso"
+                    class="bodyAll hide"
+                    x1="200"
+                    y1="100"
+                    x2="200"
+                    y2="150"
+                  />
+                  <line
+                    id="armL"
+                    class="bodyAll hide"
+                    x1="200"
+                    y1="120"
+                    x2="170"
+                    y2="140"
+                  />
+                  <line
+                    id="armR"
+                    class="bodyAll hide"
+                    x1="200"
+                    y1="120"
+                    x2="230"
+                    y2="140"
+                  />
+                  <line
+                    id="legL"
+                    class="bodyAll hide"
+                    x1="200"
+                    y1="150"
+                    x2="180"
+                    y2="190"
+                  />
+                  <line
+                    id="legR"
+                    class="bodyAll hide"
+                    x1="200"
+                    y1="150"
+                    x2="220"
+                    y2="190"
+                  />
+                </g>
+              </g>
+              <line x1="30" y1="250" x2="280" y2="250" />
+              <line x1="100" y1="250" x2="100" y2="20" />
+              <line x1="98" y1="20" x2="202" y2="20" />
+              <line x1="200" y1="20" x2="200" y2="60" />
+            </svg>
+          </div>
+          <div class="hangman__words">
+            <div id="wordsContainer" class="hangman__words_container"></div>
+          </div>
+        </div>
+        <div class="keyboard">
+          <div class="keys"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

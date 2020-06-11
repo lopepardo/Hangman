@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  font-family: "VT323", monospace;
+
+  /* Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---- HANGMAN ---- */
+.hangman {
+  /* Grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.hangman__svg {
+  text-align: end;
+}
+.hangman__words {
+  /* Flexbox */
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+.letter {
+  width: 30px;
+  margin: 0 2px;
+  text-align: center;
+  border-bottom: 3px solid black;
+  display: inline-block;
+  color: black;
+  font-size: 2.5rem;
+}
+line,
+circle {
+  stroke: black;
+  stroke-width: 4;
+  fill: black;
+}
+.animation {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 5s linear forwards;
+  animation: dash 10s linear forwards;
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.hide {
+  visibility: hidden;
+}
+
+/* ---- KEYBOARD ---- */
+.keyboard {
+  padding: 30px;
+  background-color: rgba(128, 128, 128, 0.89);
+  box-shadow: 0 0 50px 2px rgb(0, 0, 0);
+
+  border-radius: 10px;
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  justify-content: center;
+  gap: 10px;
+}
+.key-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 3px 0 0 rgb(94, 94, 94);
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  /* Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disable {
+  background-color: rgba(255, 255, 255, 0.466);
+  cursor: default;
+}
+
+@media only screen and (max-width: 600px) {
+  .hangman {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hangman__svg {
+    text-align: center;
+  }
+  .hangman__words {
+    justify-content: center;
+  }
+  .keys {
+    grid-template-columns: repeat(9, 25px);
+  }
+  .key-button {
+    width: 25px;
+    height: 25px;
+  }
+}
