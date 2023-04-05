@@ -11,7 +11,7 @@ Características del Juego:
 - Representación visual del número de intentos restantes mediante una animación SVG.
 - Programación orientada a objetos para una gestión del flujo de juego.
 
-El juego está disponible para jugar en línea en la siguiente dirección: https://luisfelipel.github.io/Hangman/. 
+El juego está disponible para jugar en línea en la siguiente dirección: https://lopepardo.github.io/Hangman/. 
 
 ## Tablero del juego
 
